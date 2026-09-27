@@ -2,7 +2,7 @@
 
 **Status:** Planning draft
 **Prepared:** September 28, 2026
-**Scope:** Room information now; room inquiries and online booking in later phases.
+**Scope:** Room information and email inquiries now; reservation management and online booking in later phases.
 
 This plan uses the room information provided by the ministry for the current website. The attached general website masterplan contains older room labels and provisional rates; those details are not treated as confirmed and must not be published as current facts.
 
@@ -61,11 +61,13 @@ Create an inventory sheet with one row per room. Confirm:
 
 Also decide who can change availability, how quickly inquiries are answered, and who handles cancellations or date changes.
 
-## 5. Phase Two: inquiry-based booking
+## 5. Phase Two: email inquiry flow
 
-Once room details and a public contact method are confirmed, add a request form. A request is **not a confirmed reservation** until ministry staff approves it.
+The website now has an email inquiry form for general questions, room stays, chapel rentals, and function hall rentals. Room requests accept dates, group size, preferred room mix, number of rooms if known, and an optional total accommodation budget. This lets the ministry consider a room arrangement for large groups without promising capacity or price before staff review.
 
-Collect only what staff need:
+The form sends email through a server-side Next.js route and Resend. Configure the Resend API key and a sender address from a domain verified with Resend in Vercel before expecting form submissions to arrive. The recipient defaults to the published Moriah contact email. A request is **not a confirmed reservation** until ministry staff approves it.
+
+The form collects only what staff need:
 
 - arrival and departure dates;
 - number of guests;
@@ -73,7 +75,7 @@ Collect only what staff need:
 - guest name and one contact method;
 - optional note for the ministry.
 
-Show an explicit pending message after submission. Staff check the room calendar, then confirm or decline with the guest directly. Until a shared calendar is in use, staff must record approved stays and maintenance blocks in one agreed source of truth to avoid double booking.
+The page shows an explicit pending message after submission. Staff check the room calendar, then confirm or decline with the guest directly. Until a shared calendar is in use, staff must record approved stays and maintenance blocks in one agreed source of truth to avoid double booking.
 
 ## 6. Phase Three: staff-managed availability
 
@@ -115,7 +117,8 @@ Guest login, payment processing, and a CMS are not prerequisites for the first p
 - [x] Room breakdown supplied: 11 non-solo rooms and 6 solo rooms.
 - [x] Current availability across the inventory supplied.
 - [x] Air conditioning confirmed for all rooms.
-- [ ] Public inquiry contact confirmed.
+- [x] Public inquiry contact confirmed.
+- [x] Website email form built for questions and reservation requests.
 - [ ] Room types and capacities confirmed.
 - [ ] Rates confirmed or explicitly kept unpublished.
 
@@ -125,7 +128,9 @@ Guest login, payment processing, and a CMS are not prerequisites for the first p
 - [ ] Rates and stay rules approved.
 - [ ] One staff-owned availability calendar selected.
 - [ ] A request owner and response timeframe agreed.
-- [ ] Public contact and privacy notice ready.
+- [x] Public contact and inquiry form available.
+- [ ] Resend sender domain and Vercel environment variables configured for email delivery.
+- [ ] Privacy notice approved.
 
 ### Ready for online confirmation or payment
 
@@ -137,4 +142,4 @@ Guest login, payment processing, and a CMS are not prerequisites for the first p
 
 ## 10. Recommended next implementation step
 
-Publish only the room summary in the Visit section, with an availability-check reminder. Keep the other room details clearly marked as forthcoming. Gather the inventory and operating answers in Section 4 before designing a booking calendar or accepting reservations online.
+Configure Resend and the Vercel environment variables so form submissions arrive at the ministry email, then send a real delivery check. Keep the room form as an inquiry until room capacities, rates, and operating rules are confirmed. Gather the inventory and operating answers in Section 4 before adding a booking calendar or accepting confirmed reservations online.

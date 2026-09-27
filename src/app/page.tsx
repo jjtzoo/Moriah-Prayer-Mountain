@@ -1,4 +1,5 @@
 import Image from "next/image";
+import InquiryForm from "@/app/ui/inquiry-form";
 
 type NewsItem = {
   title: string;
@@ -656,20 +657,11 @@ export default function Home() {
           </div>
           <div className="contact-action">
             <p>
-              For current gathering dates, travel guidance, or group visit
-              arrangements, please connect with Moriah before planning your trip.
+              Ask a question, inquire about a room stay, or request a chapel or
+              function hall rental. Large groups can share a budget so the
+              ministry can consider a suitable room arrangement.
             </p>
-            <a
-              className="button button-light"
-              href="https://www.google.com/maps/search/?api=1&query=Mt.+Moriah+Prayer+Mountain+Masbate"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Find Moriah in Masbate <span aria-hidden="true">↗</span>
-            </a>
-            <span className="contact-note">
-              Official contact details will be added once confirmed.
-            </span>
+            <InquiryForm />
           </div>
         </section>
       </main>
