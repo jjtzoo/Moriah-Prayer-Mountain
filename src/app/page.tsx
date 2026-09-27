@@ -444,7 +444,15 @@ export default function Home() {
               </li>
               <li>
                 <span>02</span>
-                <div><strong>Rooms</strong><p>Room availability is confirmed with the ministry.</p></div>
+                <div>
+                  <strong>Rooms</strong>
+                  <p>
+                    17 rooms in all: 11 non-solo rooms and 6 solo rooms. All 17
+                    rooms are currently available and have air conditioning.
+                    Confirm availability for your dates with the ministry;
+                    room details and rates are coming soon.
+                  </p>
+                </div>
               </li>
               <li>
                 <span>03</span>

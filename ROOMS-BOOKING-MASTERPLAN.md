@@ -14,26 +14,26 @@ Keep the presentation consistent with Moriah as a prayer and retreat ministry. T
 
 ## 2. Confirmed information
 
-- Moriah has **11 rooms in total**.
-- **6 solo rooms are currently available**, according to the ministry's latest information.
+- Moriah has **17 rooms in total**: **11 non-solo rooms** and **6 solo rooms**.
+- **All 17 rooms are currently available.** Confirm date-specific availability before a guest makes travel plans.
 - **All rooms have air conditioning.**
 
-Availability can change. The website should ask visitors to confirm it before they travel. The remaining five rooms' types and availability are not specified yet.
+The specific configurations of the 11 non-solo rooms have not been provided yet. Availability can change by date, so the website should ask visitors to confirm their dates before they travel.
 
 ## 3. Phase One: room information placeholder
 
-Add a clear room summary within the Visit area. Do not create eleven invented room cards or imply that all eleven rooms are currently available.
+Add a clear room summary within the Visit area. Do not create seventeen invented room cards or imply that dates are open before they have been checked.
 
 Suggested copy:
 
 > **Rooms at Moriah**
 >
-> Moriah has 11 rooms in total, including 6 solo rooms currently available. All rooms have air conditioning. Room details and rates are being confirmed. Please check current availability with the ministry before planning your stay.
+> Moriah has 17 rooms: 11 non-solo rooms and 6 solo rooms. All rooms have air conditioning and are currently available. Room layouts and rates are being confirmed. Please check availability for your dates with the ministry before planning your stay.
 
 Display these points:
 
-- 11 rooms total;
-- 6 solo rooms currently available, subject to confirmation;
+- 17 rooms total: 11 non-solo rooms and 6 solo rooms;
+- all 17 rooms currently available, with date-specific availability confirmed by the ministry;
 - air conditioning in all rooms;
 - individual room layouts, capacity, rates, and booking details to come.
 
@@ -77,7 +77,7 @@ Show an explicit pending message after submission. Staff check the room calendar
 
 ## 6. Phase Three: staff-managed availability
 
-After the inquiry process is understood, add an admin calendar for the eleven rooms. Staff should be able to:
+After the inquiry process is understood, add an admin calendar for all seventeen rooms. Staff should be able to:
 
 - view arrivals, departures, and pending requests;
 - confirm, decline, edit, or cancel requests;
@@ -111,8 +111,9 @@ Guest login, payment processing, and a CMS are not prerequisites for the first p
 
 ### Ready for the informational placeholder
 
-- [x] Total room count supplied: 11.
-- [x] Solo-room count supplied: 6.
+- [x] Total room count supplied: 17.
+- [x] Room breakdown supplied: 11 non-solo rooms and 6 solo rooms.
+- [x] Current availability across the inventory supplied.
 - [x] Air conditioning confirmed for all rooms.
 - [ ] Public inquiry contact confirmed.
 - [ ] Room types and capacities confirmed.
@@ -120,7 +121,7 @@ Guest login, payment processing, and a CMS are not prerequisites for the first p
 
 ### Ready for inquiry requests
 
-- [ ] All 11 rooms and their bookable status documented.
+- [ ] All 17 rooms and their date-specific bookable status documented.
 - [ ] Rates and stay rules approved.
 - [ ] One staff-owned availability calendar selected.
 - [ ] A request owner and response timeframe agreed.
