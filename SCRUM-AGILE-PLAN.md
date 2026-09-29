@@ -4,7 +4,7 @@
 
 ## Product goal
 
-Help visitors understand Moriah, inquire about stays and venue rentals, and—once room operations and payment rules are confirmed—complete a reliable full-payment booking online.
+Help visitors understand Moriah, support its ministry through a clear donation path, inquire about stays and venue rentals, and—once room operations and payment rules are confirmed—complete a reliable full-payment booking online.
 
 ## Scrum setup
 
@@ -19,6 +19,8 @@ Help visitors understand Moriah, inquire about stays and venue rentals, and—on
 The public Next.js site is deployed on Vercel. It includes the ministry information pages, room information placeholder and gallery, function hall event information, and inquiry form. The story quote has higher contrast. The Vercel production URL is `https://moriah-prayer-mountain.vercel.app`.
 
 The inquiry form's Resend delivery is **not configured** yet. The room section's PayPal copy is informational; there is **no live checkout or booking system**. Room layouts, capacities, and rates remain unconfirmed.
+
+Donations and paid services must have separate visitor flows, payment purposes, and financial records. Do not use a donation checkout for room stays or venue rental fees.
 
 ## Product backlog
 
@@ -82,6 +84,20 @@ Ordered by priority. Items blocked on ministry decisions or account setup stay i
 - Staff can identify who changed a booking and when.
 
 **Blocked by:** Named operational owner and ministry workflow decision.
+
+### P2 — Establish a separate donation path
+
+**Story:** As a supporter, I want a clearly labeled way to donate to Moriah that explains how the funds will be used and who receives them.
+
+**Acceptance criteria:**
+
+- Donation purpose, target, recipient organization/account, organizer, and fund-use plan are approved and shown clearly.
+- The donation panel and checkout are separate from room-stay and function-hall rental inquiries/payments.
+- Donation confirmations and records can be reconciled separately from rental or booking payments.
+- Any tax-deductibility statement is shown only if Moriah's status and the platform confirm it.
+- A real, verified PayPal Donate link/button or approved campaign URL is tested before the website displays a live donation CTA.
+
+**Blocked by:** Ministry approval of campaign purpose and recipient, a verified receiving account, and a chosen donation platform/link.
 
 ### P3 — Build staff-managed reservations
 

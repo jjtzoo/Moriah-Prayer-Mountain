@@ -254,6 +254,7 @@ export default function Home() {
             <a href="#rooms">Rooms</a>
             <a href="#directions">How to get here</a>
             <a href="#gatherings">Gatherings</a>
+            <a href="#support">Support</a>
             <a href="#news">News &amp; updates</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -264,6 +265,7 @@ export default function Home() {
           <a href="#rooms">Rooms</a>
           <a href="#directions">How to get here</a>
           <a href="#gatherings">Gatherings</a>
+          <a href="#support">Support</a>
           <a href="#news">News &amp; updates</a>
           <a className="nav-contact" href="#contact">
             Get in touch <span aria-hidden="true">↗</span>
@@ -546,9 +548,9 @@ export default function Home() {
               </a>
             </div>
             <div className="rooms-payment-note" aria-live="polite">
-              <span className="rooms-payment-icon" aria-hidden="true">P</span>
-              <p><strong>PayPal checkout</strong><br />Pay the full stay total after Moriah confirms availability, your room arrangement, and the price.</p>
-              <span className="rooms-payment-status">Full payment · confirmation required</span>
+              <span className="rooms-payment-icon" aria-hidden="true">₱</span>
+              <p><strong>Room-stay payment</strong><br />Accommodation charges are separate from donations. Moriah will confirm availability, your room arrangement, and the price before sharing payment instructions.</p>
+              <span className="rooms-payment-status">After confirmation</span>
             </div>
           </div>
         </section>
@@ -706,6 +708,38 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="support section-pad" id="support">
+          <div className="support-intro">
+            <p className="eyebrow">Voluntary giving</p>
+            <h2>
+              Support the work,
+              <br />
+              <em>separately.</em>
+            </h2>
+            <p>
+              Gifts support Moriah Prayer Mountain’s ministry. They are
+              separate from payment for a room stay, chapel use, or function
+              hall rental.
+            </p>
+          </div>
+          <aside className="support-card" aria-labelledby="support-card-title">
+            <span className="support-card-mark" aria-hidden="true">✳</span>
+            <p className="eyebrow">Support Moriah</p>
+            <h3 id="support-card-title">Questions about giving?</h3>
+            <p>
+              Contact the ministry for current giving information. Online
+              donation details will be added when the receiving account and
+              donation link are ready.
+            </p>
+            <a className="text-link" href="#contact">
+              Ask about supporting Moriah <span aria-hidden="true">↗</span>
+            </a>
+            <small>
+              Choose “Donation or ministry support inquiry” in the contact form.
+            </small>
+          </aside>
+        </section>
+
         <section className="news section-pad" id="news">
           <div className="news-heading">
             <div>
@@ -756,9 +790,9 @@ export default function Home() {
           </div>
           <div className="contact-action">
             <p>
-              Ask a question, inquire about a room stay, or request a chapel or
-              function hall rental. Large groups can share a budget so the
-              ministry can consider a suitable room arrangement.
+              Ask about supporting the ministry, inquire about a room stay, or
+              request a chapel or function hall rental. Large groups can share
+              a budget so the ministry can consider a suitable room arrangement.
             </p>
             <InquiryForm />
           </div>
@@ -779,6 +813,7 @@ export default function Home() {
           <a href="#rooms">Rooms</a>
           <a href="#directions">How to get here</a>
           <a href="#gatherings">Gatherings</a>
+          <a href="#support">Support</a>
           <a href="#news">News &amp; updates</a>
         </nav>
         <span className="copyright">Masbate, Philippines</span>

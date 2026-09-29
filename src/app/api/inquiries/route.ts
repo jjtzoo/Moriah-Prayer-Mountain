@@ -1,11 +1,12 @@
 import { inquiryEmail } from "@/lib/site-config";
 
-type RequestType = "rooms" | "chapel" | "function-hall" | "general";
+type RequestType = "rooms" | "chapel" | "function-hall" | "support" | "general";
 
 const requestLabels: Record<RequestType, string> = {
   rooms: "Room stay or group reservation",
   chapel: "Chapel rental",
   "function-hall": "Function hall rental",
+  support: "Donation or ministry support inquiry",
   general: "General inquiry",
 };
 
@@ -74,7 +75,7 @@ export async function POST(request: Request) {
     return jsonError("Enter your name and a valid email address.", 400);
   }
 
-  if (requestType !== "general") {
+  if (requestType !== "general" && requestType !== "support") {
     if (!isDate(arrivalDate) || !Number.isInteger(guestCount) || guestCount < 1 || guestCount > 500) {
       return jsonError("Enter a valid date and group size.", 400);
     }
@@ -114,7 +115,9 @@ export async function POST(request: Request) {
     requestType === "rooms" && budgetValue ? `Total room budget (PHP): ${budgetValue}` : "",
     message ? `Message:\n${message}` : "",
     "",
-    "This is an inquiry, not a confirmed booking. Please reply to the guest to confirm availability, room arrangement, and rates.",
+    requestType === "support"
+      ? "This is a voluntary ministry-support question only. No donation or payment was made through this form."
+      : "This is an inquiry, not a confirmed booking. Please reply to the guest to confirm availability, room arrangement, and rates.",
   ].filter(Boolean);
 
   const subjectName = name.replace(/[\r\n]+/g, " ").slice(0, 80);

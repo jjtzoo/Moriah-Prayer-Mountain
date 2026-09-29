@@ -4,12 +4,13 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import { inquiryEmail } from "@/lib/site-config";
 
-type RequestType = "rooms" | "chapel" | "function-hall" | "general";
+type RequestType = "rooms" | "chapel" | "function-hall" | "support" | "general";
 
 const requestLabels: Record<RequestType, string> = {
   rooms: "Room stay or group reservation",
   chapel: "Chapel rental",
   "function-hall": "Function hall rental",
+  support: "Donation or ministry support inquiry",
   general: "General inquiry",
 };
 
@@ -21,7 +22,7 @@ export default function InquiryForm() {
     message: string;
   } | null>(null);
 
-  const needsDates = requestType !== "general";
+  const needsDates = requestType !== "general" && requestType !== "support";
   const isRoomRequest = requestType === "rooms";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -43,8 +44,9 @@ export default function InquiryForm() {
 
       setResult({
         kind: "success",
-        message:
-          "Your inquiry was sent to Moriah. A room or venue is not reserved until the ministry confirms it with you.",
+        message: requestType === "support"
+          ? "Your ministry-support question was sent to Moriah. This form does not process donations."
+          : "Your inquiry was sent to Moriah. A room or venue is not reserved until the ministry confirms it with you.",
       });
       form.reset();
       setRequestType("rooms");
@@ -62,10 +64,9 @@ export default function InquiryForm() {
   return (
     <div className="inquiry-wrap">
       <p className="inquiry-intro">
-        Planning for a group, even up to 50 guests? Share your dates, group
-        size, and estimated room budget. The ministry can review a suitable
-        arrangement and reply with options. Every request is confirmed directly
-        with you.
+        {requestType === "support"
+          ? "Have a question about supporting Moriah? Send a message here. This inquiry form does not collect or process donations."
+          : "Planning for a group, even up to 50 guests? Share your dates, group size, and estimated room budget. The ministry can review a suitable arrangement and reply with options. Every request is confirmed directly with you."}
       </p>
 
       <form className="inquiry-form" onSubmit={handleSubmit}>
@@ -194,8 +195,9 @@ export default function InquiryForm() {
             <span aria-hidden="true">↗</span>
           </button>
           <p>
-            This is an inquiry only. Your room or venue is not reserved until
-            Moriah confirms it.
+            {requestType === "support"
+              ? "This sends a question only; it does not make a donation."
+              : "This is an inquiry only. Your room or venue is not reserved until Moriah confirms it."}
           </p>
         </div>
         <p
