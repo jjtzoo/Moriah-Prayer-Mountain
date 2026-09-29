@@ -22,6 +22,8 @@ The inquiry form's Resend delivery is **not configured** yet. The room section's
 
 Donations and paid services must have separate visitor flows, payment purposes, and financial records. Do not use a donation checkout for room stays or venue rental fees.
 
+The proposed staff-run handoff after an inquiry—including intake, availability checks, quotes, payment verification, donation handling, reconciliation, and ministry decisions—is documented in [POST-INQUIRY-WORKFLOW.md](POST-INQUIRY-WORKFLOW.md). It requires ministry review before any draft response target or hold/payment policy becomes official.
+
 ## Product backlog
 
 Ordered by priority. Items blocked on ministry decisions or account setup stay in the backlog until those inputs are available.
