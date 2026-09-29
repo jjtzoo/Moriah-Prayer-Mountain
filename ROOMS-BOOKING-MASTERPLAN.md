@@ -39,7 +39,7 @@ Display these points:
 
 Keep this as an informational placeholder. Do not add a date picker, fake availability calendar, booking confirmation, login, or payment step yet. Do not publish the older Small/Big/VIP labels or prices until the ministry verifies them.
 
-Do not add room photos throughout the page. Add room photography only after the ministry provides approved, good-quality photos and chooses where a consolidated room gallery belongs.
+Use the supplied grounds, room-courtyard, and shared-sala photos in one consolidated gallery with neutral captions. Keep room labels, layouts, and capacity general until the ministry confirms them. The function hall photo may appear in the gatherings section.
 
 ## 4. Information to confirm before accepting booking requests
 

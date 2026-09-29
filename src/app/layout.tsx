@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Moriah Prayer Mountain",
     description:
-      "Come away from the noise and seek God through prayer, worship, fellowship, and rest.",
+      "A place in Masbate to come away, seek God, and share life together.",
     type: "website",
   },
 };

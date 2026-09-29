@@ -71,3 +71,125 @@ a{color:inherit;text-decoration:none}
 .inquiry-email a:focus-visible,.inquiry-submit:focus-visible{outline:2px solid #d0bd8c;outline-offset:4px}
 @media(max-width:900px){.contact-band{grid-template-columns:.65fr 1.35fr;gap:7%}.contact-text{position:static}}
 @media(max-width:680px){.contact-band{grid-template-columns:1fr;gap:27px}.contact-action>.inquiry-intro{font-size:16px}.inquiry-fields{grid-template-columns:1fr;gap:14px}.inquiry-field-wide{grid-column:auto}.inquiry-submit-row{align-items:flex-start;flex-direction:column;gap:11px}}
+
+.rooms{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(42px,8vw,120px);align-items:start;background:#f8f6ef}
+.rooms-heading{position:sticky;top:115px;max-width:420px}
+.rooms-heading .eyebrow{color:#9d8352}
+.rooms-heading h2{font:500 clamp(43px,4.8vw,63px)/1.06 var(--serif);letter-spacing:-.04em;margin:0 0 20px}
+.rooms-heading h2 em{color:#858b73}
+.rooms-heading>p:last-child{font-size:12px;line-height:1.9;color:#70756b;max-width:370px}
+.rooms-content{min-width:0}
+.room-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.room-card{min-height:300px;background:#e9e6dc;padding:25px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.room-card-solo{background:#e2e4d9}
+.room-card-count{font:500 56px/.95 var(--serif);letter-spacing:-.05em;color:var(--green)}
+.room-card-count small{font:600 8px/1 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:#8c805e}
+.room-card .eyebrow{font-size:8px;letter-spacing:.15em;color:#9d8352;margin:0 0 8px}
+.room-card h3{font:500 27px/1.1 var(--serif);margin:0 0 9px;color:var(--green)}
+.room-card p:not(.eyebrow){font-size:10px;line-height:1.7;color:#70756b;margin:0;max-width:230px}
+.room-card-mark{position:absolute;right:19px;top:20px;color:rgba(157,131,82,.55);font-size:17px}
+.rooms-booking-note{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:28px 0;border-bottom:1px solid #d0cabb}
+.rooms-note-label{font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:#9d8352}
+.rooms-booking-note h3{font:500 26px/1.2 var(--serif);color:var(--green);margin:8px 0}
+.rooms-booking-note p{max-width:430px;font-size:10px;line-height:1.8;color:#70756b;margin:0}
+.rooms-payment-note{display:flex;align-items:center;gap:14px;padding:18px 0 0;color:#73766d}
+.rooms-payment-icon{width:29px;height:29px;border:1px solid #d0cabb;border-radius:50%;display:grid;place-items:center;font:700 15px Arial;color:#2470a5}
+.rooms-payment-note p{font-size:9px;line-height:1.6;margin:0;flex:1}
+.rooms-payment-note strong{font-size:10px;color:#343e35}
+.rooms-payment-status{font-size:8px;letter-spacing:.09em;text-transform:uppercase;color:#8c805e}
+@media(max-width:900px){.rooms{grid-template-columns:.7fr 1.3fr;gap:6%}.room-card{padding:20px;min-height:270px}.rooms-booking-note{align-items:flex-start;flex-direction:column}}
+@media(max-width:680px){.rooms{grid-template-columns:1fr;gap:26px;padding:82px 27px}.rooms-heading{position:static}.rooms-heading h2{font-size:clamp(43px,11vw,59px)}.room-cards{grid-template-columns:1fr 1fr;gap:9px}.room-card{padding:17px;min-height:250px}.room-card-count{font-size:47px}.room-card h3{font-size:22px}.room-card p:not(.eyebrow){font-size:9px}.rooms-booking-note{gap:17px;padding:23px 0}.rooms-payment-note{align-items:flex-start;flex-wrap:wrap}.rooms-payment-note p{min-width:calc(100% - 50px);flex:1}.rooms-payment-status{margin-left:43px}}
+
+/* Moriah visual refresh: real mountain photography, warm stone, forest green, and quiet plum. */
+:root{--ink:#26372e;--green:#263f32;--deep:#1a3025;--sage:#8f9a80;--cream:#f7f4ec;--paper:#eeeae0;--sand:#d7d0c2;--gold:#b69365;--white:#fffdf8;--muted:#6f756b;--serif:"Palatino Linotype","Book Antiqua",Georgia,serif;--sans:Arial,Helvetica,sans-serif;--max:1320px}
+body{font-family:var(--sans);font-size:15px;line-height:1.75;letter-spacing:.005em}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance}
+.site-header{backdrop-filter:blur(9px);background:linear-gradient(180deg,rgba(19,41,31,.22),transparent);border-bottom-color:rgba(255,253,248,.28)}
+.site-header.is-scrolled{background:rgba(247,244,236,.94);box-shadow:0 8px 26px rgba(28,48,37,.08)}
+.brand-mark{border-radius:50% 50% 48% 8%;transform:rotate(-45deg)}
+.brand-mark:before,.brand-mark:after,.brand-mark span{transform:rotate(45deg)}
+.hero{height:min(900px,100svh);min-height:680px;align-items:center;background:#24382b}
+.hero-image{object-fit:cover;object-position:center 56%;transform:scale(1.01);animation:hero-arrive 1.3s ease-out both}
+.hero-texture{position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,39,29,.86) 0%,rgba(18,39,29,.61) 45%,rgba(18,39,29,.08) 100%),linear-gradient(0deg,rgba(17,35,27,.36),transparent 48%)}
+.hero-content{max-width:960px;padding:110px clamp(26px,11vw,166px) 90px}
+.hero h1{font-size:clamp(64px,8vw,116px);line-height:.93;letter-spacing:-.065em;max-width:820px}
+.hero h1 em{color:#e1cdaa}
+.hero-copy{max-width:390px;font-size:14px}
+.hero-caption{right:clamp(25px,6.3vw,96px);bottom:35px}
+.scroll-cue{bottom:34px}
+.button{min-height:54px;border-radius:2px;letter-spacing:.1em}
+.button:active{transform:translateY(1px) scale(.985)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #b69365;outline-offset:4px}
+.welcome{background:#f7f4ec}
+.welcome-kicker{border-bottom-color:#d8d1c3}
+.welcome h2,.story h2,.section-heading h2,.gatherings h2,.journal-heading h2{font-size:clamp(50px,5.4vw,74px);line-height:1;letter-spacing:-.055em}
+.welcome h2 em,.story h2 em,.gatherings h2 em,.journal-heading h2 em{color:#927d65}
+.welcome-copy .lead,.visit-intro .lead{font:500 22px/1.5 var(--serif);color:#364b3d}
+.story{background:#e9e5da;grid-template-columns:1.04fr .96fr}
+.story-aside{position:relative;overflow:hidden;background:#263e31;isolation:isolate}
+.story-aside:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(0deg,rgba(20,41,31,.77),rgba(20,41,31,.07) 78%)}
+.story-photo{object-fit:cover;object-position:center 52%;z-index:-1;transition:transform .7s ease}
+.story-aside:hover .story-photo{transform:scale(1.035)}
+.story-aside-mark,.story-aside p,.story-aside-place{position:relative;z-index:1}
+.story-aside p{max-width:490px;font-size:clamp(29px,3.8vw,48px);letter-spacing:-.025em}
+.rhythm{background:#253d31}
+.rhythm-item{transition:padding-left .25s ease,background .25s ease}
+.rhythm-item:hover{padding-left:8px;background:rgba(255,255,255,.025)}
+.visit{background:#f4f0e7}
+.amenities-note{isolation:isolate;min-height:440px;background:#263e31}
+.amenities-photo{object-fit:cover;object-position:center 62%;z-index:-1;filter:saturate(.82)}
+.amenities-note:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(150deg,rgba(24,47,35,.84),rgba(24,47,35,.63) 54%,rgba(24,47,35,.89))}
+.amenities-note:after{z-index:1;pointer-events:none}
+.amenities-note>*:not(.amenities-photo){position:relative;z-index:2}
+.rooms{background:#f7f4ec}
+.rooms-heading{position:static;padding-top:5px}
+.rooms-heading h2{font-size:clamp(47px,5.2vw,70px);line-height:1;letter-spacing:-.055em}
+.room-gallery{display:grid;grid-template-columns:1.24fr .76fr;grid-template-rows:190px 190px;gap:10px;margin-bottom:23px}
+.room-gallery figure{position:relative;min-width:0;min-height:0;margin:0;overflow:hidden;background:#d7d8ce}
+.room-gallery-feature{grid-row:1/3}
+.room-gallery img{object-fit:cover;transition:transform .65s ease}
+.room-gallery figure:hover img{transform:scale(1.04)}
+.room-gallery figcaption,.gathering-photo figcaption{position:absolute;z-index:1;left:13px;bottom:12px;color:#fffdf8;font-size:8px;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.room-gallery figure:after,.gathering-photo:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(0deg,rgba(19,35,27,.52),transparent);pointer-events:none}
+.room-card{background:#ece8dd;min-height:260px;transition:transform .25s ease,background .25s ease}
+.room-card:hover{transform:translateY(-3px);background:#e8e3d7}
+.room-card-solo{background:#e5e7dd}
+.room-card-count{font-variant-numeric:tabular-nums;letter-spacing:-.07em}
+.rooms-booking-note{border-color:#d1cbbb}
+.rooms-payment-note{min-height:60px}
+.rooms-payment-status{white-space:nowrap}
+.directions{background:#eeeadf}
+.directions-heading h2{font-size:clamp(48px,5vw,70px);line-height:1;letter-spacing:-.055em}
+.route-step{padding-block:27px}
+.route-step h3{font-size:23px;letter-spacing:-.02em}
+.directions-map-content iframe{filter:saturate(.75)}
+.gatherings{background:#f7f4ec}
+.gatherings-board{border:0;padding:21px;background:#eae6dc;grid-template-rows:auto auto 1fr;min-height:0}
+.board-topline{padding-bottom:11px;color:#6e766c}
+.gathering-photo{grid-column:1/-1;position:relative;aspect-ratio:2.25;margin:0;overflow:hidden;background:#d2d5ca}
+.gathering-photo img{object-fit:cover;object-position:center 54%;transition:transform .5s ease}
+.gathering-photo:hover img{transform:scale(1.025)}
+.gathering-card{min-height:225px;background:#f7f4ec;padding:24px;transition:transform .25s ease}
+.gathering-card-offset{background:#e3e6db}
+.gathering-card:hover{transform:translateY(-3px)}
+.gathering-card h3{letter-spacing:-.025em}
+.news{background:#e9e5da}
+.news-heading h2{font-size:clamp(48px,5.2vw,70px);line-height:1;letter-spacing:-.055em}
+.news-card{border-color:#cbc4b7}
+.news-image{background:#d7d9d0}
+.news-image-file{transition:transform .6s ease}
+.news-card:hover .news-image-file{transform:scale(1.03)}
+.news-card h3{letter-spacing:-.025em}
+.contact-band{background:#20382b}
+.site-footer{background:#172a21}
+.site-footer nav a:hover,.main-navigation a:hover,.desktop-nav a:hover{color:#d8c39b}
+@media(max-width:900px){.hero-content{padding-left:8vw}.rooms{grid-template-columns:1fr;gap:28px}.rooms-heading{max-width:680px}.room-gallery{grid-template-rows:180px 180px}}
+@media(max-width:680px){.hero{height:min(820px,100svh);min-height:690px;align-items:flex-end}.hero-image{object-position:54% center}.hero-texture{background:linear-gradient(90deg,rgba(18,39,29,.57),rgba(18,39,29,.05)),linear-gradient(0deg,rgba(17,35,27,.82),rgba(17,35,27,.05) 84%)}.hero-content{padding:0 27px 150px}.hero h1{font-size:clamp(58px,14vw,82px)}.story-photo{object-position:center 58%}.amenities-note{min-height:0}.room-gallery{grid-template-columns:1fr 1fr;grid-template-rows:210px 125px;gap:8px}.room-gallery-feature{grid-column:1/-1;grid-row:auto}.room-gallery figure:not(.room-gallery-feature){min-height:125px}.room-gallery figcaption{font-size:7px;left:9px;bottom:8px}.room-card{min-height:235px}.gatherings-board{padding:11px}.gathering-photo{aspect-ratio:1.7}.gathering-card{min-height:230px;padding:17px 14px}.gathering-card h3{font-size:22px}.rooms-payment-status{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.story-photo,.room-gallery img,.gathering-photo img,.gathering-card,.room-card,.rhythm-item{transition:none}}
+
+/* Keep the story quote readable over changing photo detail and brightness. */
+.story-aside{color:#fffdf8}
+.story-aside:before{background:linear-gradient(0deg,rgba(18,38,28,.96) 0%,rgba(18,38,28,.84) 32%,rgba(18,38,28,.42) 66%,rgba(18,38,28,.12) 100%)}
+.story-aside-mark{color:#e1cdaa;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.story-aside p{color:#fffdf8;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.story-aside-place{color:rgba(255,253,248,.9);text-shadow:0 1px 8px rgba(0,0,0,.55)}

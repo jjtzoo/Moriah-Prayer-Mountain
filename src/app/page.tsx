@@ -251,6 +251,7 @@ export default function Home() {
           <nav aria-label="Main navigation">
             <a href="#story">Our story</a>
             <a href="#visit">Visit</a>
+            <a href="#rooms">Rooms</a>
             <a href="#directions">How to get here</a>
             <a href="#gatherings">Gatherings</a>
             <a href="#news">News &amp; updates</a>
@@ -260,6 +261,7 @@ export default function Home() {
         <nav className="desktop-nav" aria-label="Main navigation">
           <a href="#story">Our story</a>
           <a href="#visit">Visit</a>
+          <a href="#rooms">Rooms</a>
           <a href="#directions">How to get here</a>
           <a href="#gatherings">Gatherings</a>
           <a href="#news">News &amp; updates</a>
@@ -271,6 +273,14 @@ export default function Home() {
 
       <main id="main">
         <section className="hero" id="home" aria-labelledby="hero-title">
+          <Image
+            className="hero-image"
+            src="/assets/site/grounds.jpg"
+            alt=""
+            fill
+            preload
+            sizes="100vw"
+          />
           <div className="hero-texture" aria-hidden="true" />
           <div className="hero-content">
             <p className="eyebrow hero-eyebrow">
@@ -336,6 +346,13 @@ export default function Home() {
 
         <section className="story section-pad" id="story">
           <div className="story-aside">
+            <Image
+              className="story-photo"
+              src="/assets/site/hillside-path.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 760px) 100vw, 50vw"
+            />
             <span className="story-aside-mark" aria-hidden="true">
               ✳
             </span>
@@ -434,6 +451,13 @@ export default function Home() {
             </a>
           </div>
           <div className="visit-note amenities-note">
+            <Image
+              className="amenities-photo"
+              src="/assets/site/chapel.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 760px) 100vw, 42vw"
+            />
             <div className="amenities-heading">
               <span className="visit-note-index">Stay and gather</span>
               <h3>Amenities at Moriah</h3>
@@ -448,10 +472,9 @@ export default function Home() {
                 <div>
                   <strong>Rooms</strong>
                   <p>
-                    17 rooms in all: 11 non-solo rooms and 6 solo rooms. All 17
-                    rooms are currently available and have air conditioning.
-                    Confirm availability for your dates with the ministry;
-                    room details and rates are coming soon.
+                    17 air-conditioned rooms: 11 non-solo rooms and 6 solo
+                    rooms. Ask the ministry to confirm availability for your
+                    dates; room layouts and rates are being confirmed.
                   </p>
                 </div>
               </li>
@@ -461,6 +484,72 @@ export default function Home() {
               </li>
             </ul>
             <span className="visit-note-place">Masbate · Philippines</span>
+          </div>
+        </section>
+
+        <section className="rooms section-pad" id="rooms">
+          <div className="rooms-heading">
+            <p className="eyebrow"><span className="eyebrow-rule" /> A place to rest</p>
+            <h2>Stay awhile.<br /><em>Make space for prayer.</em></h2>
+            <p>
+              Moriah has 17 air-conditioned rooms. The ministry is confirming
+              room layouts and rates, and can check dates with you directly.
+            </p>
+          </div>
+          <div className="rooms-content">
+            <div className="room-gallery" aria-label="Views of the Moriah grounds and gathering spaces">
+              <figure className="room-gallery-feature">
+                <Image src="/assets/site/grounds.jpg" alt="Guest rooms at Moriah among green hills" fill sizes="(max-width: 760px) 100vw, 48vw" />
+                <figcaption>The rooms, set into the hillside</figcaption>
+              </figure>
+              <figure>
+                <Image src="/assets/site/room-courtyard.jpg" alt="Moriah room courtyard and garden path" fill sizes="(max-width: 760px) 50vw, 22vw" />
+                <figcaption>A quiet courtyard</figcaption>
+              </figure>
+              <figure>
+                <Image src="/assets/site/shared-sala.jpg" alt="Outdoor sala with a shared table and wooden chairs" fill sizes="(max-width: 760px) 50vw, 22vw" />
+                <figcaption>Space to gather</figcaption>
+              </figure>
+            </div>
+            <div className="room-cards">
+              <article className="room-card">
+                <span className="room-card-count">11 <small>rooms</small></span>
+                <div>
+                  <p className="eyebrow">Room type</p>
+                  <h3>Non-solo rooms</h3>
+                  <p>Room configurations and guest capacity are being confirmed.</p>
+                </div>
+                <span className="room-card-mark" aria-hidden="true">✳</span>
+              </article>
+              <article className="room-card room-card-solo">
+                <span className="room-card-count">06 <small>rooms</small></span>
+                <div>
+                  <p className="eyebrow">For individual stays</p>
+                  <h3>Solo rooms</h3>
+                  <p>Ask the ministry about dates, room details, and current rates.</p>
+                </div>
+                <span className="room-card-mark" aria-hidden="true">✳</span>
+              </article>
+            </div>
+            <div className="rooms-booking-note">
+              <div>
+                <span className="rooms-note-label">Plan your stay</span>
+                <h3>Check your dates with us.</h3>
+                <p>
+                  Availability can change. Send an inquiry and the ministry will
+                  confirm room options and pricing before you make travel plans.
+                  An inquiry does not reserve a room.
+                </p>
+              </div>
+              <a className="button button-dark" href="#contact">
+                Ask about a stay <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <div className="rooms-payment-note" aria-live="polite">
+              <span className="rooms-payment-icon" aria-hidden="true">P</span>
+              <p><strong>PayPal checkout</strong><br />Pay the full stay total after Moriah confirms availability, your room arrangement, and the price.</p>
+              <span className="rooms-payment-status">Full payment · confirmation required</span>
+            </div>
           </div>
         </section>
 
@@ -569,40 +658,50 @@ export default function Home() {
 
         <section className="gatherings section-pad" id="gatherings">
           <div className="gatherings-intro">
-            <p className="eyebrow">Gatherings at Moriah</p>
+            <p className="eyebrow">Events at Moriah</p>
             <h2>
-              Life together,
+              Room to gather,
               <br />
-              <em>in every season.</em>
+              <em>for every occasion.</em>
             </h2>
             <p>
-              Prayer gatherings, retreats, teaching, and fellowship are part of
-              life at Moriah. Ask the ministry for current dates and details.
+              Moriah’s function hall is available for weddings, conferences,
+              seminars, church events, and other celebrations. Contact us to
+              ask about dates, arrangements, and rental details.
             </p>
             <a className="text-link" href="#contact">
-              Ask about upcoming gatherings <span aria-hidden="true">↗</span>
+              Inquire about the function hall <span aria-hidden="true">↗</span>
             </a>
           </div>
           <div className="gatherings-board">
             <div className="board-topline">
-              <span>Gather at Moriah</span>
+              <span>Function hall available</span>
               <span className="board-dot" />
-              <span>Dates shared by the ministry</span>
+              <span>Ask us about your event</span>
             </div>
+            <figure className="gathering-photo">
+              <Image
+                src="/assets/site/function-hall-interior.jpg"
+                alt="Inside Moriah’s open-sided function hall, arranged for a gathering"
+                fill
+                sizes="(max-width: 760px) 100vw, 55vw"
+              />
+              <figcaption>A welcoming space for your event</figcaption>
+            </figure>
             <article className="gathering-card">
-              <span className="gathering-type">Prayer &amp; worship</span>
-              <h3>Come together in prayer.</h3>
-              <p>Shared moments of worship and prayer for individuals and groups.</p>
+              <span className="gathering-type">Weddings &amp; celebrations</span>
+              <h3>Mark a meaningful day.</h3>
+              <p>Gather family and friends for weddings and special occasions.</p>
               <a href="#contact">Ask for details <span aria-hidden="true">↗</span></a>
             </article>
             <article className="gathering-card gathering-card-offset">
-              <span className="gathering-type">Retreats &amp; fellowship</span>
-              <h3>Make room to reconnect.</h3>
-              <p>A quiet setting for church groups, families, and ministry teams.</p>
-              <a href="#contact">Plan with us <span aria-hidden="true">↗</span></a>
+              <span className="gathering-type">Conferences &amp; meetings</span>
+              <h3>Bring people together.</h3>
+              <p>Host conferences, seminars, church events, and group gatherings.</p>
+              <a href="#contact">Inquire with us <span aria-hidden="true">↗</span></a>
             </article>
             <div className="board-footnote">
-              Specific schedules are confirmed directly with Moriah.
+              Dates, setup, and rental details are confirmed with Moriah.
             </div>
           </div>
         </section>
@@ -677,6 +776,7 @@ export default function Home() {
         <nav aria-label="Footer navigation">
           <a href="#story">Our story</a>
           <a href="#visit">Visit</a>
+          <a href="#rooms">Rooms</a>
           <a href="#directions">How to get here</a>
           <a href="#gatherings">Gatherings</a>
           <a href="#news">News &amp; updates</a>
