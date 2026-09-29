@@ -24,8 +24,8 @@ const newsItems: NewsItem[] = [
   {
     title: "The official Moriah Prayer Mountain website launches",
     category: "Official launch",
-    dateLabel: "September 27, 2026",
-    dateTime: "2026-09-27",
+    dateLabel: "September 29, 2026",
+    dateTime: "2026-09-29",
     timelineGroup: "2026-09",
     summary:
       "Moriah’s official website launches, bringing ministry stories, visitor information, directions, and updates together in one place.",
